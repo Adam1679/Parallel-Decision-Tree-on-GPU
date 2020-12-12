@@ -5,7 +5,7 @@
 ## URL
 https://linna1998.github.io/Parallel-Decision-Tree-on-GPU/
 ## Report 
-![report](./final\ report.pdf)
+![report](./final report.pdf)
 ## Summary
 We are going to implement a streaming and communication-efficient parallel version of the gradient boosting decision tree (gbdt). Streaming means that the model could use online training method and be capable of processing streaming data like batch data in neural network training. At first, we are going to implement a sequential version and use CPU to parallelize it. This model is served as a baseline. Then, GPU would be applied to implement a faster version. Finally, we are going to evaluate the speedup, memory performance and bottlenecks of all these versions. The main challenge resides in which strategy we would use to parallelize the algorithm. There are multiple ways to parallel the decision tree building process, including data-parallel, feature-parallel, etc. Some strategies are easy to implement but suffer from the load-balance issue. Some strategies have high communication costs. In our study, we focus on reducing communication costs during the tree construction process. Also, memory constraint would be taken into consideration since GPU has limited memory to use. 
 
